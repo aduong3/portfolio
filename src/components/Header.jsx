@@ -1,9 +1,9 @@
 import { Link } from "react-router";
 
-function Sidebar() {
+function Header() {
   return (
-    <nav className="flex w-full justify-between py-4 text-xl font-bold">
-      <Link to="/">Andrew Duong</Link>
+    <nav className="flex w-full justify-between px-3 py-4 text-xl font-bold">
+      <Link to="/">Home</Link>
 
       <div className="flex gap-12">
         <Link to="/about">About</Link>
@@ -14,4 +14,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default Header;
