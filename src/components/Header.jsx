@@ -12,7 +12,7 @@ function Header() {
       </div>
 
       <div
-        className={`fixed left-0 z-100 flex h-full w-full transform flex-col items-center justify-center gap-8 bg-zinc-900 text-3xl transition-all duration-500 ease-in-out sm:hidden ${isOpen ? "top-0" : "-top-full"} `}
+        className={`fixed left-0 z-100 flex h-full w-full transform flex-col items-center justify-center gap-8 bg-zinc-900 text-3xl transition-all duration-300 ease-in-out sm:hidden ${isOpen ? "top-0" : "-top-full"} `}
       >
         <p onClick={() => setIsOpen(false)}>Close Menu</p>
         <Link to="/" onClick={() => setIsOpen(false)}>
