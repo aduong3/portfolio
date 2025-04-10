@@ -3,6 +3,7 @@ import photo from "./../assets/Andrew_photo.png";
 import { IoMdDownload } from "react-icons/io";
 import { MdOutlinePageview } from "react-icons/md";
 import { SiExpress, SiMongodb, SiNodedotjs, SiReact } from "react-icons/si";
+import SkillItems from "../components/About/SkillItems";
 
 function Home() {
   return (
@@ -58,22 +59,10 @@ function Home() {
           My Main Tech Stack:
         </p>
         <div className="grid w-full grid-cols-4 gap-6 rounded-sm border-1 px-6 py-3 lg:w-[65%]">
-          <div className="flex flex-col items-center justify-center">
-            <SiMongodb className="h-8 w-8" />{" "}
-            <span className="hidden sm:inline">MongoDB</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiExpress className="h-8 w-8" />{" "}
-            <span className="hidden sm:inline">Express.js</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiReact className="h-8 w-8" />{" "}
-            <span className="hidden sm:inline">React</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiNodedotjs className="h-8 w-8" />{" "}
-            <span className="hidden sm:inline">Node.js</span>
-          </div>
+          <SkillItems Icon={SiMongodb} label="MongoDB" />
+          <SkillItems Icon={SiExpress} label="Express.js" />
+          <SkillItems Icon={SiReact} label="React" />
+          <SkillItems Icon={SiNodedotjs} label="Node.js" />
         </div>
       </section>
     </>
