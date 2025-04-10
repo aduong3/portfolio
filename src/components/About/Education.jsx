@@ -18,6 +18,14 @@ function Education() {
       <div className="flex flex-col gap-1">
         <h2 className="text-xl">Udemy Courses</h2>
         <UdemyLink
+          to="https://www.udemy.com/share/101XY23@vrwwavEYfz3tW5391b0SCiTtazq9tfKtD5fniWuJdXzfog1DH2fcufTLYUc1wE7znA==/"
+          isCompleted={true}
+        >
+          <IoIosLink />
+          JavaScript Algorithms and Data Structures Masterclass
+          <span className="hidden sm:inline">| Colt Steele</span>
+        </UdemyLink>
+        <UdemyLink
           to="https://www.udemy.com/share/108PTo3@FNEKhBxQiqlQ4Mxp_aC5Ameb_0h6D-TknOHhQtXgjOXQw-ml10hjWDyCZgB1GDqvNA==/"
           isCompleted={true}
         >
