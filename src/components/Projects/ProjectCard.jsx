@@ -22,11 +22,18 @@ function ProjectCard({ project, index }) {
       <div
         className={`${orientation === "left" ? "lg:-left-10 lg:order-first" : "lg:-right-10 lg:order-last"} relative`}
       >
-        <img
-          src={photo}
-          alt={`${title} project screenshot`}
-          className={`h-full rounded-xl border-1 border-white object-cover lg:scale-115`}
-        />
+        {photo && (
+          <img
+            src={photo}
+            alt={`${title} project screenshot`}
+            className={`h-full rounded-xl border-1 border-white object-cover lg:scale-115`}
+          />
+        )}
+        {!photo && (
+          <p className="flex h-full min-h-30 items-center justify-center rounded-xl border-1 border-white bg-red-600 text-center text-xl md:text-2xl lg:scale-115">
+            Still Under Development!
+          </p>
+        )}
         {!isCompleted && (
           <p
             className={`${orientation === "left" ? "lg:-left-22 lg:-rotate-10" : "lg:-right-22 lg:rotate-10"} absolute top-0 rounded-lg bg-red-500 px-2 py-1 font-semibold lg:-top-10`}
@@ -35,7 +42,7 @@ function ProjectCard({ project, index }) {
           </p>
         )}
       </div>
-      <div className="flex flex-col gap-3 px-4 py-4">
+      <div className="flex flex-col gap-3 px-4 py-3">
         <h1 className="text-2xl font-semibold md:text-3xl">{title}</h1>
         <div className="flex flex-grow items-center">
           <p className="hidden md:block">{description}</p>
@@ -61,14 +68,16 @@ function ProjectCard({ project, index }) {
               Visit Page
             </Link>
           )}
-          <Link
-            className="rounded-lg px-2 py-1 font-semibold hover:bg-yellow-500"
-            target="_blank"
-            rel="noopener noreferrer"
-            to={viewCodeLink}
-          >
-            View Code
-          </Link>
+          {viewCodeLink && (
+            <Link
+              className="rounded-lg px-2 py-1 font-semibold hover:bg-yellow-500"
+              target="_blank"
+              rel="noopener noreferrer"
+              to={viewCodeLink}
+            >
+              View Code
+            </Link>
+          )}
         </div>
       </div>
     </section>
