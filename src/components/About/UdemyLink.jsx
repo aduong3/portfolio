@@ -8,7 +8,7 @@ function UdemyLink({ to, isCompleted, children }) {
         to={to}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex max-w-max items-center gap-1 hover:text-blue-500"
+        className="flex max-w-max items-center gap-1 hover:text-blue-400"
       >
         {children}
       </Link>
