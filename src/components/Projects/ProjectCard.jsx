@@ -17,32 +17,35 @@ function ProjectCard({ project, index }) {
 
   return (
     <section
-      className={` ${hoverAnimationEffect} relative grid grid-cols-2 rounded-lg border-1 border-white/10 text-left`}
+      className={` ${hoverAnimationEffect} relative grid grid-cols-1 rounded-lg border-1 border-white/10 text-left lg:grid-cols-2`}
     >
       <div
-        className={`${orientation === "left" ? "-left-10 order-first" : "-right-10 order-last"} relative`}
+        className={`${orientation === "left" ? "lg:-left-10 lg:order-first" : "lg:-right-10 lg:order-last"} relative`}
       >
         <img
           src={photo}
-          alt="choreSite website made by Andrew Duong"
-          className={`h-full scale-115 rounded-xl border-1 border-white object-cover`}
+          alt={`${title} project screenshot`}
+          className={`h-full rounded-xl border-1 border-white object-cover lg:scale-115`}
         />
         {!isCompleted && (
           <p
-            className={`${orientation === "left" ? "-left-22 -rotate-10" : "-right-22 rotate-10"} absolute -top-10 rounded-lg bg-red-500 px-2 py-1 font-semibold`}
+            className={`${orientation === "left" ? "lg:-left-22 lg:-rotate-10" : "lg:-right-22 lg:rotate-10"} absolute top-0 rounded-lg bg-red-500 px-2 py-1 font-semibold lg:-top-10`}
           >
             Under Development
           </p>
         )}
       </div>
       <div className="flex flex-col gap-3 px-4 py-4">
-        <h1 className="text-3xl">{title}</h1>
+        <h1 className="text-2xl font-semibold md:text-3xl">{title}</h1>
         <div className="flex flex-grow items-center">
-          <p>{description}</p>
+          <p className="hidden md:block">{description}</p>
         </div>
         <div className="flex flex-wrap items-center gap-3 px-1">
           {tags.map((tag) => (
-            <p className="rounded-xl bg-zinc-700 px-2 py-1 font-semibold">
+            <p
+              className="rounded-xl bg-zinc-700 px-2 py-1 text-sm font-semibold md:text-base"
+              key={tag}
+            >
               {tag}
             </p>
           ))}

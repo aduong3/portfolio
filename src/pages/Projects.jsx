@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import choreSitePhoto from "../assets/choreSite.png";
 import portfolioPhoto from "../assets/portfolioWebsite.png";
 import ProjectCard from "../components/Projects/ProjectCard";
@@ -23,7 +22,7 @@ const projectsToShow = [
     ],
     visitPageLink: "https://choresite-n71r.onrender.com/",
     viewCodeLink: "https://github.com/aduong3/choreSite",
-    isCompleted: false,
+    isCompleted: true,
   },
   {
     photo: portfolioPhoto,
@@ -38,7 +37,7 @@ const projectsToShow = [
 
 function Projects() {
   return (
-    <div className="flex flex-col gap-24">
+    <div className="flex flex-col gap-16 px-7 py-16">
       {projectsToShow.map((project, index) => (
         <ProjectCard project={project} index={index} key={project.title} />
       ))}
