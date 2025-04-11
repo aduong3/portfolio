@@ -3,7 +3,7 @@ import CompletionTag from "./CompletionTag";
 
 function UdemyLink({ to, isCompleted, children }) {
   return (
-    <div className="flex gap-4">
+    <div className="grid grid-cols-[1fr_80px] gap-4 sm:flex">
       <Link
         to={to}
         target="_blank"

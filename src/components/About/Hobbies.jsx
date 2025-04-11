@@ -1,7 +1,7 @@
 function Hobbies() {
   return (
     <div className="flex flex-col gap-1">
-      <h1 className="text-4xl font-bold text-orange-300">
+      <h1 className="text-3xl font-bold text-orange-300 sm:text-4xl">
         Hobbies and Interests
       </h1>
       <p>📚 Language Learning: Japanese (N4)</p>

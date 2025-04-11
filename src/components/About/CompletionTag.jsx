@@ -1,5 +1,5 @@
 const baseClass =
-  "whitespace-nowrap rounded-lg px-2 py-1 text-xs font-semibold flex items-center";
+  "whitespace-nowrap rounded-lg px-2 py-1 text-xs font-semibold flex justify-center items-center";
 
 function CompletionTag({ isCompleted }) {
   if (isCompleted !== true && isCompleted !== false) return null;

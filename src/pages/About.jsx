@@ -6,7 +6,9 @@ function About() {
   return (
     <div className="flex flex-col gap-5 py-6">
       <div className="flex flex-col gap-2">
-        <h1 className="text-4xl font-bold text-red-400">Introduction</h1>
+        <h1 className="text-3xl font-bold text-red-400 sm:text-4xl">
+          Introduction
+        </h1>
         <p>
           I'm a Full-Stack Developer passionate about technology and
           problem-solving. I’m driven by the desire to find practical and
@@ -18,7 +20,9 @@ function About() {
         </p>
       </div>
       <div>
-        <h1 className="text-4xl font-bold text-yellow-300">Experience</h1>
+        <h1 className="text-3xl font-bold text-yellow-300 sm:text-4xl">
+          Experience
+        </h1>
         <div className="flex flex-col gap-2">
           <div className="md:flex md:justify-between">
             <h2 className="text-xl">Pacico, Inc. - IT</h2>
