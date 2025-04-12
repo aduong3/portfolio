@@ -32,11 +32,9 @@ export const projectsToShow = [
   },
   {
     photo: null,
-    title: "Language Learning Supplement",
-    description: `I still need to brainstorm what features I would want first. 
-    It will be a website that I can add notes, vocabulary, etc to supplement my language learning journey.
-    Possibly add some sort of AI to help correct my notes and such.`,
-    tags: [],
+    title: "Next Project",
+    description: `Current Ideas: Language Learning, Travel All-In-One, Expense/Budget Tracker, `,
+    tags: ["TypeScript", "React", "Tailwindcss", "Node.js", "Express.js"],
     visitPageLink: null,
     viewCodeLink: null,
     isCompleted: false,
