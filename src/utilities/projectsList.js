@@ -32,9 +32,17 @@ export const projectsToShow = [
   },
   {
     photo: null,
-    title: "Next Project",
-    description: `Current Ideas: Language Learning, Travel All-In-One, Expense/Budget Tracker, `,
-    tags: ["TypeScript", "React", "Tailwindcss", "Node.js", "Express.js"],
+    title: "roommateTasks",
+    description: `Inspired by the old-school way of delegating shared household tasks on a whiteboard. 
+    Users would be able to create tasks, assign them to others, and hold each other accountable.`,
+    tags: [
+      "TypeScript",
+      "React Native",
+      "Nativewind",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
     visitPageLink: null,
     viewCodeLink: null,
     isCompleted: false,
