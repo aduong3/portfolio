@@ -46,7 +46,7 @@ function Home() {
           Projects
         </Link>
         <a
-          href="/Andrew_Duong_Resume.pdf"
+          href="/Andrew_Resume.pdf"
           download
           className="flex items-center gap-2 rounded-md bg-yellow-400 px-3 py-2 font-bold text-black transition duration-400 ease-in-out hover:scale-110"
         >
