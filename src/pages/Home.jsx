@@ -45,14 +45,6 @@ function Home() {
           <MdOutlinePageview className="text-xl" />
           Projects
         </Link>
-        <a
-          href="/Andrew_Resume.pdf"
-          download
-          className="flex items-center gap-2 rounded-md bg-yellow-400 px-3 py-2 font-bold text-black transition duration-400 ease-in-out hover:scale-110"
-        >
-          <IoMdDownload className="text-xl" />
-          Resume
-        </a>
       </section>
       <section className="mt-5 flex flex-col px-5 md:items-center">
         <p className="self-center text-lg font-bold italic">
