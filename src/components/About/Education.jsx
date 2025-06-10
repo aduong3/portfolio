@@ -55,6 +55,14 @@ function Education() {
           <span className="hidden sm:inline">| Maximilian Schwarzmüller</span>
         </UdemyLink>
         <UdemyLink
+          to="https://www.udemy.com/course/javascript-advanced/"
+          isCompleted={true}
+        >
+          <IoIosLink className="shrink-0" />
+          Advanced JavaScript{" "}
+          <span className="hidden sm:inline">| Asim Hussain</span>
+        </UdemyLink>
+        <UdemyLink
           to="https://www.udemy.com/share/1041Y03@TiP2ASsWCoXDwg0ijYuxR9qul7fuGfa2ycfv5yobfEsiCGj3uGYGC8rUoEqq4pH5YQ==/"
           isCompleted={false}
         >
