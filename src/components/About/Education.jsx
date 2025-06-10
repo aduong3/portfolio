@@ -21,7 +21,7 @@ function Education() {
         <h2 className="text-lg font-semibold sm:text-xl">Udemy Courses</h2>
 
         <UdemyLink
-          to="https://www.udemy.com/share/101XY23@vrwwavEYfz3tW5391b0SCiTtazq9tfKtD5fniWuJdXzfog1DH2fcufTLYUc1wE7znA==/"
+          to="https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/"
           isCompleted={true}
         >
           <IoIosLink className="shrink-0" />
@@ -29,7 +29,7 @@ function Education() {
           <span className="hidden sm:inline">| Colt Steele</span>
         </UdemyLink>
         <UdemyLink
-          to="https://www.udemy.com/share/108PTo3@FNEKhBxQiqlQ4Mxp_aC5Ameb_0h6D-TknOHhQtXgjOXQw-ml10hjWDyCZgB1GDqvNA==/"
+          to="https://www.udemy.com/course/the-ultimate-react-course/"
           isCompleted={true}
         >
           <IoIosLink className="shrink-0" />
@@ -38,7 +38,7 @@ function Education() {
         </UdemyLink>
 
         <UdemyLink
-          to="https://www.udemy.com/share/101Wv63@9ppfNf50jil3G3iE4VkRE30Md9WDQNHczJRtbgsAqU_k0UmYiHrcTd0JmyU_9Okr2w==/"
+          to="https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/"
           isCompleted={true}
         >
           <IoIosLink className="shrink-0" />
@@ -47,7 +47,7 @@ function Education() {
         </UdemyLink>
 
         <UdemyLink
-          to="https://www.udemy.com/share/101sTi3@ZetVJTLAEzRE9d5WxlnVKC_v6xnC8C8cMsXAFJPDYhb6H-Vd7OJqa8gJQG99rvc1hQ==/"
+          to="https://www.udemy.com/course/understanding-typescript"
           isCompleted={true}
         >
           <IoIosLink className="shrink-0" />
@@ -63,7 +63,7 @@ function Education() {
           <span className="hidden sm:inline">| Asim Hussain</span>
         </UdemyLink>
         <UdemyLink
-          to="https://www.udemy.com/share/1041Y03@TiP2ASsWCoXDwg0ijYuxR9qul7fuGfa2ycfv5yobfEsiCGj3uGYGC8rUoEqq4pH5YQ==/"
+          to="https://www.udemy.com/course/postgresqlmasterclass/"
           isCompleted={false}
         >
           <IoIosLink className="shrink-0" />
@@ -71,7 +71,7 @@ function Education() {
           <span className="hidden sm:inline">| Adnan Waheed</span>
         </UdemyLink>
         <UdemyLink
-          to="https://www.udemy.com/share/103Ia03@Bnd0VOCy8DZxo4kod2Dfntbl0ABJju_T2SPLRdoIHv1cnOXDA6TmhcquiAQ8dMeyTA==/"
+          to="https://www.udemy.com/course/docker-kubernetes-the-practical-guide"
           isCompleted={false}
         >
           <IoIosLink className="shrink-0" />
@@ -79,7 +79,7 @@ function Education() {
           <span className="hidden sm:inline">| Maximilian Schwarzmüller</span>
         </UdemyLink>
         <UdemyLink
-          to="https://www.udemy.com/share/107oRA3@T7Sr5nKw_Gfh--RRApNnMOMeHHT0wEU37nLblf17gV6m7-MRLMM41jqmzt1mEaW4YQ==/"
+          to="https://www.udemy.com/course/github-actions-the-complete-guide"
           isCompleted={false}
         >
           <IoIosLink className="shrink-0" />
