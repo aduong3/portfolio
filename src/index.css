@@ -1,1 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-marcellus-sc: "Marcellus SC", sans-serif;
+
+  --animate-slide-in: slide-in 0.3s ease-in-out;
+
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

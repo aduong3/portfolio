@@ -1,16 +1,14 @@
 import { Outlet } from "react-router";
-import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
 
 function Layout() {
   return (
-    <div className="min-h-screen max-w-svw bg-black/88 text-gray-50">
-      <div className="mx-auto flex min-h-screen w-[80%] flex-col xl:w-[60%]">
-        <Header />
-        <div className="flex flex-grow items-center justify-center">
-          <div className="w-full">
-            <Outlet />
-          </div>
-        </div>
+    <div className="font-marcellus-sc grid h-svh grid-cols-[12%_1fr] px-6">
+      <div className="flex items-center border-r-2 border-gray-300">
+        <Sidebar />
+      </div>
+      <div className="flex items-center justify-center">
+        <Outlet />
       </div>
     </div>
   );
