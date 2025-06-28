@@ -14,7 +14,7 @@ const navItems = [
 function Sidebar() {
   const location = useLocation();
   return (
-    <nav className="flex flex-col gap-15">
+    <nav className="flex flex-col gap-15 pl-6">
       {navItems.map(({ name, path }, index) => {
         const isActive = location.pathname === path;
         return (
