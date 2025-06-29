@@ -34,7 +34,7 @@ export const projectsToShow = [
     photo: null,
     title: "roommateTasks",
     description: `Inspired by the old-school way of delegating shared household tasks on a whiteboard. 
-    Users would be able to create tasks, assign them to others, and hold each other accountable.`,
+    Users would be able to create tasks, assign them to others, and hold each other accountable. This project will be put on pause as I explore more deeply into mobile development, especially working with gradle.`,
     tags: [
       "TypeScript",
       "React Native",

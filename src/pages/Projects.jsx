@@ -1,6 +1,7 @@
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import { projectsToShow } from "../utilities/projectsList";
 import { useState } from "react";
+import ProjectSkillTags from "../components/ProjectSkillTags";
 
 /*
 Need to work on:
@@ -35,8 +36,8 @@ function Projects() {
             >
               <GrFormPrevious />
             </span>
-            <div className="bg-gray-300 px-3 py-1">
-              <p>
+            <div className="w-[60px] bg-gray-300">
+              <p className="px-3 py-1">
                 {currentIndex + 1} / {totalProjects}
               </p>
             </div>
@@ -48,7 +49,7 @@ function Projects() {
             </span>
           </div>
 
-          <div className="relative flex w-full">
+          <section className="relative flex w-full">
             <div className="absolute -top-[37px] -left-42 flex h-[245px] w-[472px] translate-z-6 rotate-x-12 rotate-y-45 items-center justify-center border-2 bg-gray-300/40 transform-3d">
               {prevProj.photo ? (
                 <img
@@ -82,10 +83,12 @@ function Projects() {
                 <h3 className="text-2xl">No Project Photo Available</h3>
               )}
             </div>
-          </div>
+          </section>
           <h2 className="text-3xl font-semibold">{currentProj.title}</h2>
-          <div>
-            <p>Skill tags Here</p>
+          <div className="flex gap-3">
+            {currentProj.tags.map((tag) => (
+              <ProjectSkillTags key={tag} skill={tag} />
+            ))}
           </div>
           <div className="flex gap-16 text-xl">
             {currentProj.visitPageLink && (
