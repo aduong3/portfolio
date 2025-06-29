@@ -1,5 +1,6 @@
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import { projectsToShow } from "../utilities/projectsList";
+import { useState } from "react";
 
 /*
 Need to work on:
@@ -9,39 +10,96 @@ map all the projects and display each description, photo, skill tags, etc
 */
 
 function Projects() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const totalProjects = projectsToShow.length;
+
+  const prevIndex = (currentIndex - 1 + totalProjects) % totalProjects;
+  const nextIndex = (currentIndex + 1) % totalProjects;
+
+  const handlePrev = () => setCurrentIndex(prevIndex);
+  const handleNext = () => setCurrentIndex(nextIndex);
+
+  const currentProj = projectsToShow[currentIndex];
+  const prevProj = projectsToShow[prevIndex];
+  const nextProj = projectsToShow[nextIndex];
+
   return (
     <div className="grid h-full grid-cols-3 grid-rows-5">
       <h1 className="place-self-center text-5xl font-semibold">Projects</h1>
       <section className="col-span-full row-span-full row-start-2 grid place-items-center">
-        <div className="flex flex-col items-center gap-3">
+        <div className="flex w-[942px] flex-col items-center gap-3">
           <div className="flex items-center gap-5">
-            <span className="text-3xl hover:cursor-pointer">
+            <span
+              className="text-3xl hover:cursor-pointer"
+              onClick={handlePrev}
+            >
               <GrFormPrevious />
             </span>
-            <div className="bg-gray-300 px-3 py-1">o</div>
-            <span className="text-3xl hover:cursor-pointer">
+            <div className="bg-gray-300 px-3 py-1">
+              <p>
+                {currentIndex + 1} / {totalProjects}
+              </p>
+            </div>
+            <span
+              className="text-3xl hover:cursor-pointer"
+              onClick={handleNext}
+            >
               <GrFormNext />
             </span>
           </div>
 
           <div className="relative flex w-full">
-            <div className="absolute -left-42 h-60 w-[50%] -translate-y-9 translate-z-6 rotate-x-12 rotate-y-45 rounded-xl bg-gray-300/40 transform-3d">
-              <img alt="photo of previous project here" className="absolute" />
+            <div className="absolute -top-[37px] -left-42 flex h-[245px] w-[472px] translate-z-6 rotate-x-12 rotate-y-45 items-center justify-center border-2 bg-gray-300/40 transform-3d">
+              {prevProj.photo ? (
+                <img
+                  alt="photo of previous project here"
+                  src={prevProj.photo}
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <h3 className="text-2xl">No Project Photo Available</h3>
+              )}
             </div>
-            <div className="z-300 mx-auto h-60 w-[50%] rounded-xl bg-gray-300">
-              <img alt="photo of project here" />
+            <div className="z-300 mx-auto flex h-[240px] w-[472px] items-center justify-center border-2 bg-gray-300">
+              {currentProj.photo ? (
+                <img
+                  alt="photo of project here"
+                  src={currentProj.photo}
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <h3 className="text-2xl">No Project Photo Available</h3>
+              )}
             </div>
-            <div className="absolute -right-42 h-60 w-[50%] -translate-y-9 translate-z-6 -rotate-x-12 rotate-y-45 rounded-xl bg-gray-300/40 transform-3d">
-              <img alt="photo of next project here" />
+            <div className="absolute -top-[37px] -right-42 flex h-[245px] w-[472px] translate-z-6 -rotate-x-12 rotate-y-45 items-center justify-center border-2 bg-gray-300/40 transform-3d">
+              {nextProj.photo ? (
+                <img
+                  alt="photo of next project here"
+                  src={nextProj.photo}
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <h3 className="text-2xl">No Project Photo Available</h3>
+              )}
             </div>
           </div>
-          <h2 className="text-2xl">Project Title</h2>
-          <p>Skill tags Here</p>
-          <div className="w-[50%]">
-            <p className="text-lg">
-              This is where the text will be at. This will describe what the
-              project is, what problem it solves, and why I created it.
-            </p>
+          <h2 className="text-3xl font-semibold">{currentProj.title}</h2>
+          <div>
+            <p>Skill tags Here</p>
+          </div>
+          <div className="flex gap-16 text-xl">
+            {currentProj.visitPageLink && (
+              <a href={currentProj.visitPageLink}>Visit Site</a>
+            )}
+            {currentProj.viewCodeLink && (
+              <a href={currentProj.viewCodeLink}>View Code</a>
+            )}
+            {!currentProj.visitPageLink && !currentProj.viewCodeLink && (
+              <p>No Links Available</p>
+            )}
+          </div>
+          <div className="h-32">
+            <p className="text-lg">{currentProj.description}</p>
           </div>
         </div>
       </section>
