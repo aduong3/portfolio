@@ -39,40 +39,42 @@ function About() {
         </p>
       </section>
 
-      <section className="relative col-span-2 col-start-2 row-span-3 flex items-center justify-center">
-        {/* Straight card */}
-        <div className="relative z-100 h-[320px] w-[275px] rounded-md border-2 bg-white transition-all duration-300 hover:z-1000 hover:scale-115 hover:shadow-[6px_6px_5px_rgba(0,0,0,.20)]">
-          <div className="absolute top-4 left-4 h-[220px] w-[235px]">
-            <img
-              className="h-full w-full object-cover"
-              src={skytree}
-              alt="Photo of an alleyway that highlights the beauty of SkyTree at night"
-            />
-            <p className="mt-2 text-center font-medium">SkyTree</p>
+      <section className="relative col-span-2 col-start-2 row-span-3">
+        <div className="absolute top-10 left-50 flex items-center justify-center">
+          {/* Straight card */}
+          <div className="relative z-100 h-[320px] w-[275px] rounded-md border-2 bg-white transition-all duration-300 hover:z-1000 hover:scale-115 hover:shadow-[6px_6px_5px_rgba(0,0,0,.20)]">
+            <div className="absolute top-4 left-4 h-[220px] w-[235px]">
+              <img
+                className="h-full w-full object-cover"
+                src={skytree}
+                alt="Photo of an alleyway that highlights the beauty of SkyTree at night"
+              />
+              <p className="mt-2 text-center font-medium">SkyTree</p>
+            </div>
           </div>
-        </div>
-        {/* Tilted card behind all */}
-        <div className="absolute right-40 h-[320px] w-[275px] translate-y-7 rotate-z-12 rounded-md border-2 bg-white transition-all duration-300 hover:z-1000 hover:scale-115 hover:shadow-[6px_6px_5px_rgba(0,0,0,.20)]">
-          <div className="absolute top-4 left-4 h-[220px] w-[235px]">
-            <img
-              className="h-full w-full object-cover"
-              src={yukataPhoto}
-              alt="Photo of me in a Yukata at an onsen"
-            />
-            <p className="mt-2 text-center font-medium">Me in a yukata</p>
+          {/* Tilted card behind all */}
+          <div className="absolute left-47 h-[320px] w-[275px] translate-y-10 rotate-z-20 rounded-md border-2 bg-white transition-all duration-300 hover:z-1000 hover:scale-115 hover:shadow-[6px_6px_5px_rgba(0,0,0,.20)]">
+            <div className="absolute top-4 left-4 h-[220px] w-[235px]">
+              <img
+                className="h-full w-full object-cover"
+                src={yukataPhoto}
+                alt="Photo of me in a Yukata at an onsen"
+              />
+              <p className="mt-2 text-center font-medium">Me in a yukata</p>
+            </div>
           </div>
-        </div>
-        {/* Tilted card in the front */}
-        <div className="absolute right-63 -bottom-10 z-200 h-[320px] w-[275px] -rotate-z-45 rounded-md border-2 bg-white transition-all duration-300 hover:z-1000 hover:scale-115 hover:shadow-[6px_6px_5px_rgba(0,0,0,.20)]">
-          <div className="absolute top-4 left-4 h-[220px] w-[235px]">
-            <img
-              className="h-full w-full object-cover"
-              src={asakusa}
-              alt="Picture of Sensoji Temple in Asakusa"
-            />
-            <p className="mt-2 text-center font-medium">
-              Sensoji Temple in Asakusa
-            </p>
+          {/* Tilted card in the front */}
+          <div className="absolute -bottom-32 left-16 z-200 h-[320px] w-[275px] -rotate-z-45 rounded-md border-2 bg-white transition-all duration-300 hover:z-1000 hover:scale-115 hover:shadow-[6px_6px_5px_rgba(0,0,0,.20)]">
+            <div className="absolute top-4 left-4 h-[220px] w-[235px]">
+              <img
+                className="h-full w-full object-cover"
+                src={asakusa}
+                alt="Picture of Sensoji Temple in Asakusa"
+              />
+              <p className="mt-2 text-center font-medium">
+                Sensoji Temple in Asakusa
+              </p>
+            </div>
           </div>
         </div>
       </section>

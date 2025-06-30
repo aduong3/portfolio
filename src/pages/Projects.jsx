@@ -5,9 +5,9 @@ import ProjectSkillTags from "../components/ProjectSkillTags";
 
 /*
 Need to work on:
-Showing the previous and next project
-Circle indicator to show amount of projects and which project it is on.
-map all the projects and display each description, photo, skill tags, etc
+Showing the previous and next project - DONE
+Circle indicator to show amount of projects and which project it is on. - DONE (changed from circles to a number)
+map all the projects and display each description, photo, skill tags, etc - DONE
 */
 
 function Projects() {
@@ -48,12 +48,12 @@ function Projects() {
               <GrFormNext />
             </span>
           </div>
-
+          {/* Previous Project */}
           <section className="relative flex w-full">
-            <div className="absolute -top-[37px] -left-42 flex h-[245px] w-[472px] translate-z-6 rotate-x-12 rotate-y-45 items-center justify-center border-2 bg-gray-300/40 transform-3d">
+            <div className="absolute -top-[37px] -left-42 flex h-[245px] w-[472px] translate-z-6 rotate-x-12 rotate-y-45 items-center justify-center border-2 bg-gray-300/40 opacity-45 transform-3d">
               {prevProj.photo ? (
                 <img
-                  alt="photo of previous project here"
+                  alt={`Photo of project: ${prevProj.title}`}
                   src={prevProj.photo}
                   className="h-full w-full object-cover"
                 />
@@ -61,10 +61,11 @@ function Projects() {
                 <h3 className="text-2xl">No Project Photo Available</h3>
               )}
             </div>
+            {/* Current Project */}
             <div className="z-300 mx-auto flex h-[240px] w-[472px] items-center justify-center border-2 bg-gray-300">
               {currentProj.photo ? (
                 <img
-                  alt="photo of project here"
+                  alt={`Photo of project: ${currentProj.title}`}
                   src={currentProj.photo}
                   className="h-full w-full object-cover"
                 />
@@ -72,10 +73,11 @@ function Projects() {
                 <h3 className="text-2xl">No Project Photo Available</h3>
               )}
             </div>
-            <div className="absolute -top-[37px] -right-42 flex h-[245px] w-[472px] translate-z-6 -rotate-x-12 rotate-y-45 items-center justify-center border-2 bg-gray-300/40 transform-3d">
+            {/* Next Project */}
+            <div className="absolute -top-[37px] -right-42 flex h-[245px] w-[472px] translate-z-6 -rotate-x-12 rotate-y-45 items-center justify-center border-2 bg-gray-300/40 opacity-45 transform-3d">
               {nextProj.photo ? (
                 <img
-                  alt="photo of next project here"
+                  alt={`Photo of project: ${nextProj.title}`}
                   src={nextProj.photo}
                   className="h-full w-full object-cover"
                 />

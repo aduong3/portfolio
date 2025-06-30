@@ -21,7 +21,7 @@ function BackendSkills() {
     <div className="flex gap-10">
       {skills.map((skill) => (
         <div
-          className="flex flex-col items-center transition-all duration-300 hover:scale-125"
+          className="flex flex-col items-center px-2 py-1 transition-all duration-300 hover:scale-125"
           key={skill.name}
         >
           <span className="text-4xl">{skill.icon}</span>
