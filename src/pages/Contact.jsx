@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 function Contact() {
   return (
-    <div className="flex flex-col items-center justify-center gap-6 text-2xl">
+    <div className="flex h-full flex-col items-center justify-center gap-6 text-2xl">
       <p>Email: aduongsnd@gmail.com</p>
       <div className="flex flex-col gap-6">
         <Link
