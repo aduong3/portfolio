@@ -4,7 +4,7 @@ import Sidebar from "../components/Sidebar";
 function Layout() {
   return (
     <div className="font-marcellus-sc grid h-svh grid-cols-[12%_1fr]">
-      <div className="flex items-center border-r-2 border-gray-300">
+      <div className="flex items-center">
         <Sidebar />
       </div>
       <div>
