@@ -1,7 +1,6 @@
-import { VscTriangleRight } from "react-icons/vsc";
-import { Link, useLocation } from "react-router";
-
-const navButtonStyle = "text-2xl hover:cursor-pointer";
+import { useState } from "react";
+import { IoClose, IoMenu } from "react-icons/io5";
+import SideBarLinks from "./SideBarLinks";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -12,24 +11,39 @@ const navItems = [
 ];
 
 function Sidebar() {
-  const location = useLocation();
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(!open);
+  };
   return (
-    <nav className="flex flex-col gap-15 pl-6">
-      {navItems.map(({ name, path }, index) => {
-        const isActive = location.pathname === path;
-        return (
-          <Link key={index} to={path} className={navButtonStyle}>
-            {isActive && (
-              <span className="animate-slide-in flex items-center gap-4">
-                <VscTriangleRight />
-                <span>{name}</span>
-              </span>
-            )}
-            {!isActive && <span>{name}</span>}
-          </Link>
-        );
-      })}
-    </nav>
+    <>
+      <span
+        className="fixed top-4 left-4 z-999 text-5xl md:hidden"
+        onClick={handleOpen}
+      >
+        {open ? <IoClose /> : <IoMenu />}
+      </span>
+
+      <nav
+        className={`fixed z-600 flex h-full w-full flex-col items-center justify-center gap-8 bg-white transition-all duration-300 ease-in-out md:hidden ${open ? "top-0" : "-top-full"} `}
+      >
+        {navItems.map(({ name, path }, index) => (
+          <SideBarLinks
+            index={index}
+            name={name}
+            path={path}
+            handleOpen={handleOpen}
+          />
+        ))}
+      </nav>
+
+      <nav className="hidden flex-col gap-15 bg-white pl-6 md:flex">
+        {navItems.map(({ name, path }, index) => (
+          <SideBarLinks index={index} name={name} path={path} />
+        ))}
+      </nav>
+    </>
   );
 }
 
