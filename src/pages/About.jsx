@@ -40,7 +40,7 @@ function About() {
       </section>
 
       <section className="relative col-span-2 col-start-2 row-span-3">
-        <div className="absolute top-10 left-50 flex items-center justify-center">
+        <div className="absolute top-10 left-50 flex items-center justify-center 2xl:-top-50">
           {/* Straight card */}
           <div className="relative z-100 h-[320px] w-[275px] rounded-md border-2 bg-white transition-all duration-300 hover:z-1000 hover:scale-115 hover:shadow-[6px_6px_5px_rgba(0,0,0,.20)]">
             <div className="absolute top-4 left-4 h-[220px] w-[235px]">

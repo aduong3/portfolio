@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="flex h-full items-center justify-center">
       <section className="flex flex-col items-center justify-center gap-4 text-center xl:mr-96 xl:gap-8">
-        <div className="flex h-[10em] w-[10em] items-center justify-center overflow-hidden rounded-full border-4 border-blue-500 md:h-[15em] md:w-[15em] xl:hidden">
+        <div className="flex h-[12em] w-[12em] items-center justify-center overflow-hidden rounded-full border-4 border-blue-500 md:h-[15em] md:w-[15em] xl:hidden">
           <img
             src={photo}
             alt="Photo of Andrew Duong profile size"
@@ -52,7 +52,7 @@ function Home() {
       <img
         src={photoNoBG}
         alt="Photo of Andrew Duong"
-        className="pointer-events-none fixed right-[-225px] bottom-0 hidden drop-shadow-[25px_12px_0_rgba(96,165,250)] xl:inline"
+        className="pointer-events-none fixed right-[-225px] bottom-0 hidden w-[60%] drop-shadow-[25px_12px_0_rgba(96,165,250)] xl:flex 2xl:right-[-275px] 2xl:w-[50%]"
       />
     </div>
   );
