@@ -2,7 +2,7 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 
 function Contact() {
   return (
-    <div className="flex h-svh flex-col items-center justify-center gap-6 text-2xl">
+    <div className="flex h-svh flex-col items-center justify-center gap-6 text-xl sm:text-2xl">
       <p>Email: aduongsnd@gmail.com</p>
       <div className="flex flex-col gap-6">
         <a

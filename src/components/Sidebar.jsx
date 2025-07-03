@@ -30,6 +30,7 @@ function Sidebar() {
       >
         {navItems.map(({ name, path }, index) => (
           <SideBarLinks
+            key={name}
             index={index}
             name={name}
             path={path}
@@ -38,9 +39,9 @@ function Sidebar() {
         ))}
       </nav>
 
-      <nav className="hidden flex-col gap-15 bg-white pl-6 md:flex">
+      <nav className="hidden flex-col gap-15 bg-white pl-2 md:flex">
         {navItems.map(({ name, path }, index) => (
-          <SideBarLinks index={index} name={name} path={path} />
+          <SideBarLinks index={index} name={name} path={path} key={name} />
         ))}
       </nav>
     </>

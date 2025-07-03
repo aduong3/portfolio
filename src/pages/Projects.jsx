@@ -25,12 +25,12 @@ function Projects() {
   const nextProj = projectsToShow[nextIndex];
 
   return (
-    <div className="flex h-full flex-col items-center justify-center py-6 md:grid md:grid-cols-3 md:grid-rows-5">
-      <h1 className="place-self-center text-3xl font-semibold md:text-5xl">
+    <div className="flex h-full flex-col items-center justify-center py-6 xl:grid xl:grid-cols-3 xl:grid-rows-5">
+      <h1 className="place-self-center text-3xl font-semibold xl:text-5xl">
         Projects
       </h1>
-      <section className="grid place-items-center md:col-span-full md:row-span-full md:row-start-2">
-        <div className="flex w-[300px] flex-col items-center gap-3 md:w-[942px]">
+      <section className="grid place-items-center xl:col-span-full xl:row-span-full xl:row-start-2">
+        <div className="flex w-[300px] flex-col items-center gap-3 xl:w-[942px]">
           <div className="flex items-center gap-5">
             <span
               className="text-3xl hover:cursor-pointer"
@@ -52,7 +52,7 @@ function Projects() {
           </div>
           {/* Previous Project */}
           <section className="relative flex w-full">
-            <div className="absolute -top-[37px] -left-42 hidden h-[245px] w-[472px] translate-z-6 rotate-x-12 rotate-y-45 items-center justify-center border-2 bg-gray-300/40 opacity-45 transform-3d md:flex">
+            <div className="absolute -top-[37px] -left-42 hidden h-[245px] w-[472px] translate-z-6 rotate-x-12 rotate-y-45 items-center justify-center border-2 bg-gray-300/40 opacity-45 transform-3d xl:flex">
               {prevProj.photo ? (
                 <img
                   alt={`Photo of project: ${prevProj.title}`}
@@ -64,7 +64,7 @@ function Projects() {
               )}
             </div>
             {/* Current Project */}
-            <div className="z-300 mx-auto flex h-[200px] w-[350px] items-center justify-center border-2 bg-gray-300 md:h-[240px] md:w-[472px]">
+            <div className="z-300 mx-auto flex h-[200px] w-[350px] items-center justify-center border-2 bg-gray-300 xl:h-[240px] xl:w-[472px]">
               {currentProj.photo ? (
                 <img
                   alt={`Photo of project: ${currentProj.title}`}
@@ -78,7 +78,7 @@ function Projects() {
               )}
             </div>
             {/* Next Project */}
-            <div className="absolute -top-[37px] -right-42 hidden h-[245px] w-[472px] translate-z-6 -rotate-x-12 rotate-y-45 items-center justify-center border-2 bg-gray-300/40 opacity-45 transform-3d md:flex">
+            <div className="absolute -top-[37px] -right-42 hidden h-[245px] w-[472px] translate-z-6 -rotate-x-12 rotate-y-45 items-center justify-center border-2 bg-gray-300/40 opacity-45 transform-3d xl:flex">
               {nextProj.photo ? (
                 <img
                   alt={`Photo of project: ${nextProj.title}`}
@@ -90,7 +90,7 @@ function Projects() {
               )}
             </div>
           </section>
-          <h2 className="text-2xl font-semibold md:text-3xl">
+          <h2 className="text-2xl font-semibold xl:text-3xl">
             {currentProj.title}
           </h2>
           <div className="flex flex-wrap gap-3">
@@ -98,7 +98,7 @@ function Projects() {
               <ProjectSkillTags key={tag} skill={tag} />
             ))}
           </div>
-          <div className="text-md flex gap-16 md:text-xl">
+          <div className="text-md flex gap-16 xl:text-xl">
             {currentProj.visitPageLink && (
               <a href={currentProj.visitPageLink}>Visit Site</a>
             )}
@@ -109,8 +109,8 @@ function Projects() {
               <p>No Links Available</p>
             )}
           </div>
-          <div className="md:h-32">
-            <p className="text-md md:text-lg">{currentProj.description}</p>
+          <div className="xl:h-32">
+            <p className="text-md xl:text-lg">{currentProj.description}</p>
           </div>
         </div>
       </section>

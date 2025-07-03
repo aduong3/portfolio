@@ -14,7 +14,7 @@ function SideBarLinks({ path, index, name, handleOpen }) {
             <VscTriangleRight />
           </span>
 
-          <span>{name}</span>
+          <span className="flex">{name}</span>
         </div>
       )}
       {!isActive && <span>{name}</span>}

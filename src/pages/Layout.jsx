@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 
 function Layout() {
   return (
-    <div className="font-marcellus-sc flex h-svh flex-col md:grid md:grid-cols-[12%_1fr] md:items-center md:justify-center">
+    <div className="font-marcellus-sc flex h-svh flex-col md:grid md:grid-cols-[150px_1fr] md:items-center md:justify-center">
       <div>
         <Sidebar />
       </div>
