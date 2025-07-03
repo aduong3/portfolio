@@ -8,18 +8,18 @@ function Home() {
   return (
     <div className="flex h-full items-center justify-center">
       <section className="flex flex-col items-center justify-center gap-4 text-center xl:mr-96 xl:gap-8">
-        <div className="flex h-[15em] w-[15em] items-center justify-center overflow-hidden rounded-full border-4 border-blue-500 xl:hidden">
+        <div className="flex h-[10em] w-[10em] items-center justify-center overflow-hidden rounded-full border-4 border-blue-500 md:h-[15em] md:w-[15em] xl:hidden">
           <img
             src={photo}
             alt="Photo of Andrew Duong profile size"
             className="scale-150"
           />
         </div>
-        <h1 className="text-5xl lg:text-7xl">Andrew Duong</h1>
-        <h2 className="text-3xl text-blue-400 lg:text-4xl">
+        <h1 className="text-4xl lg:text-7xl">Andrew Duong</h1>
+        <h2 className="text-2xl text-blue-400 lg:text-4xl">
           Software Engineer
         </h2>
-        <div className="w-[42%]">
+        <div className="w-[80%] md:w-[42%]">
           <p className="text-md lg:text-xl">
             I’m a Full Stack Developer passionate about learning new
             technologies and turning them into solutions that make a difference.

@@ -26,14 +26,14 @@ const skills = [
 
 function ToolSkills() {
   return (
-    <div className="flex gap-10">
+    <div className="flex flex-wrap justify-center lg:gap-6">
       {skills.map((skill) => (
         <div
-          className="flex flex-col items-center px-2 py-1 transition-all duration-300 hover:scale-125"
+          className="flex flex-col flex-wrap items-center px-2 py-1 transition-all duration-300 hover:scale-125"
           key={skill.name}
         >
-          <span className="text-4xl">{skill.icon}</span>
-          <p className="text-lg">{skill.name}</p>
+          <span className="text-2xl lg:text-4xl">{skill.icon}</span>
+          <p className="text-sm lg:text-lg">{skill.name}</p>
         </div>
       ))}
     </div>

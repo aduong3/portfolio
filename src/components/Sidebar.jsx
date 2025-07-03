@@ -19,7 +19,7 @@ function Sidebar() {
   return (
     <>
       <span
-        className="fixed top-4 left-4 z-999 text-5xl md:hidden"
+        className="relative top-2 left-2 z-999 text-5xl md:hidden"
         onClick={handleOpen}
       >
         {open ? <IoClose /> : <IoMenu />}
